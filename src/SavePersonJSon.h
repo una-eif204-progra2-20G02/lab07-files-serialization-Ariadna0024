@@ -7,6 +7,7 @@
 #include <../lib/nlohmann/json.hpp>
 #include "ISaveFile.h"
 #include"PersonsVector.h"
+#include<ostream>
 
 using json = nlohmann::json;
 

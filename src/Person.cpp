@@ -3,8 +3,10 @@
 //
 
 #include "Person.h"
-Person::Person(int id, int age, string name) : id(id), age(age), name(std::move(name)) {}
 
+Person::Person(const string &name, int id, int age) : name(name), id(id), age(age) {
+
+}
 Person::~Person() = default;
 
 const string &Person::getName() const {
@@ -42,4 +44,6 @@ string Person::toString() const {
 
     return output.str();
 }
+
+
 

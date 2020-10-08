@@ -5,25 +5,25 @@
 #include "PersonsVector.h"
 
 int PersonsVector::size() {
-    return Persons.size();
+    return persons.size();
 }
 
 Person* PersonsVector::getPerson(int position) {
-    return Persons[position];
+    return persons[position];
 }
 
 void PersonsVector::addPerson(Person * person1){
-    Persons.emplace_back(person1);
+    persons.emplace_back(person1);
 }
 
 string PersonsVector::toString(){
     ostringstream output;
-    for(auto & Person : Persons)
+    for(auto & Person : persons)
         output<<Person->toString() << endl;
     return output.str();
 }
 
-PersonsVector::PersonsVector(){
-    Persons.clear();
+PersonsVector::~PersonsVector(){
+    persons.clear();
 }
 

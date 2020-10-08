@@ -7,14 +7,14 @@
 using namespace std;
 
 json SavePersonJSon::serializePerson(int position, PersonsVector persons) {
-    json jsonPersona;
+    json person;
     Person* aux = persons.getPerson(position);
-    jsonPersona["Name"] = aux->getName();
-    jsonPersona["Id"] = aux->getId();
-    jsonPersona["Age"] = aux->getAge();
+    person["Name"] = aux->getName();
+    person["Id"] = aux->getId();
+    person["Age"] = aux->getAge();
 
 
-    return jsonPersona;
+    return person;
 }
 
 void SavePersonJSon::save(PersonsVector persons, std::string fileName)
