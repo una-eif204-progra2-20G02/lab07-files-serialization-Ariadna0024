@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.17)
-project(my_project_name)
+project(lab07-files-serialization-Ariadna0024)
 
 set(CMAKE_CXX_STANDARD 14)
 
