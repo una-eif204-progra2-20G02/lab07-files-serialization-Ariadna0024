@@ -9,6 +9,8 @@
 #include<sstream>
 
 class ISaveFile {
+public:
+    virtual ~ISaveFile();
     virtual void save(PersonsVector, std::string file)=0;
 };
 

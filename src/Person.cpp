@@ -37,7 +37,7 @@ string Person::toString() const {
     ostringstream output;
 
     output<<"Name: " << getName() <<
-          "\nIdentification: " << getId() <<
+          "\nId: " << getId() <<
           "\nAge: " << getAge();
 
     return output.str();

@@ -3,3 +3,5 @@
 //
 
 #include "ISaveFile.h"
+
+ISaveFile::~ISaveFile() = default;
