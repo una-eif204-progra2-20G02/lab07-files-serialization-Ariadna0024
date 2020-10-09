@@ -5,19 +5,24 @@
 #include "FileManager.h"
 #include "PersonsVector.h"
 #include "ISaveFile.h"
+#include "BinaryFile.h"
 #include <iostream>
 
 int main(){
     PersonsVector persons;
     FileManager _fileManager;
 
+    ISaveFile* json = new SavePersonJSon();
+    ISaveFile* binary= new BinaryFile();
+
 
     persons.addPerson(new Person("Ariadna", 12726464, 20));
     persons.addPerson(new Person("Andrea", 11028393, 25));
 
-    ISaveFile* save = new SavePersonJSon();
 
-    FileManager::serialize(save, persons, "JSonPersonsFile.txt");
+
+    FileManager::serialize(json, persons, "JSonPersonsFile.txt");
+    FileManager::serialize(binary, persons, "BinaryPersonsFile.txt");
 
 
     std::cout<< persons.toString();
