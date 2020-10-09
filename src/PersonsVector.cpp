@@ -3,6 +3,7 @@
 //
 
 #include "PersonsVector.h"
+PersonsVector::PersonsVector() {}
 
 int PersonsVector::size() {
     return persons.size();

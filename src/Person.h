@@ -17,7 +17,7 @@ private:
 
 public:
     Person(const string &name, int id, int age);
-
+    Person();
     const string &getName() const;
     void setName(const string &name);
     virtual ~Person();

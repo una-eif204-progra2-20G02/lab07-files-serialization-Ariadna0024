@@ -9,6 +9,8 @@ Person::Person(const string &name, int id, int age) : name(name), id(id), age(ag
 }
 Person::~Person() = default;
 
+Person::Person() = default;
+
 const string &Person::getName() const {
     return name;
 }

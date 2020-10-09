@@ -11,6 +11,7 @@ class PersonsVector {
 private:
     vector<Person*> persons;
 public:
+    PersonsVector();
     ~PersonsVector();
     Person* getPerson(int position);
     int size();
