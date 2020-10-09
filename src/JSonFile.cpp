@@ -2,11 +2,11 @@
 // Created by ariad on 8/10/2020.
 //
 
-#include "SavePersonJSon.h"
+#include "JSonFile.h"
 #include <fstream>
 using namespace std;
 
-json SavePersonJSon::serializePerson(int position, PersonsVector persons) {
+json JSonFile::serializePerson(int position, PersonsVector persons) {
     json person;
     Person* aux = persons.getPerson(position);
     person["Name"] = aux->getName();
@@ -17,7 +17,7 @@ json SavePersonJSon::serializePerson(int position, PersonsVector persons) {
     return person;
 }
 
-void SavePersonJSon::save(PersonsVector persons, std::string fileName)
+void JSonFile::save(PersonsVector persons, std::string fileName)
 {
     vector<json> serializeVector;
 
@@ -37,4 +37,4 @@ void SavePersonJSon::save(PersonsVector persons, std::string fileName)
 
 
 
-SavePersonJSon::~SavePersonJSon() = default;
+JSonFile::~JSonFile() = default;

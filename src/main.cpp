@@ -1,7 +1,7 @@
 //
 // Created by ariad on 8/10/2020.
 //
-#include "SavePersonJSon.h"
+#include "JSonFile.h"
 #include "FileManager.h"
 #include "PersonsVector.h"
 #include "ISaveFile.h"
@@ -12,7 +12,7 @@ int main(){
     PersonsVector persons;
     FileManager _fileManager;
 
-    ISaveFile* json = new SavePersonJSon();
+    ISaveFile* json = new JSonFile();
     ISaveFile* binary= new BinaryFile();
 
 
